@@ -2,6 +2,10 @@
 
 # An introduction to relational databases
 
+## Instructions
+
+Fork and clone this repository, then close your laptop.
+
 ## Objectives
 
 By the end of this lesson, students should be able to:
@@ -32,17 +36,13 @@ What about more complicated data?
 
 Database tables can reference other tables which allows arbitrary nesting of groups of simple types.  This is something we'll be looking at more closely later.
 
-## Instructions
+## Demonstration
 
-Fork and clone this repository, then close your laptop.
-
-## Relational database management system ([RDBMS](http://en.wikipedia.org/wiki/Relational_database_management_system))
+### Relational database management system ([RDBMS](http://en.wikipedia.org/wiki/Relational_database_management_system))
 
 A **[Database Server](http://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png)** is a set of processes and files that manage the databases that store the tables.  Sticking with our previous analogy a server would map to Google Sheets.
 
 We'll be using **[PostgreSQL](http://www.postgresql.org/)**, a popular open source database server, which should already be installed on your computer.
-
-## Demonstration
 
 We'll use `sql-crud` as the database to hold our tables and **[psql](http://www.postgresql.org/docs/9.4/static/app-psql.html)** to interact with it.
 
