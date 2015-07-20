@@ -15,7 +15,8 @@ By the end of this lesson, students should be able to:
 
 ## Prerequisites
 
-A working **[PostgreSQL](http://www.postgresql.org/)** installation.
+- A working **[PostgreSQL](http://www.postgresql.org/)** installation.
+- Required reading: http://www.postgresql.org/docs/9.4/static/tutorial.html (please skip _3. Advanced Features_)
 
 ## Introduction
 
@@ -88,10 +89,9 @@ sql-crud=#
 
 Let's look at some of that help
 
+### People
 
-### Pets
-
-We'll store and manipulate information about pets.
+We'll store and manipulate information about people.
 
 ### [Table basics](http://www.postgresql.org/docs/9.4/static/ddl-basics.html)
 
@@ -157,7 +157,7 @@ $ cd sql-crud
 $ subl .
 ```
 
-Together, we'll repeat the above for people instead of pets.
+Together, we'll repeat the above for pets instead of people.
 
 First, let's come up with the columns we'll need.
 
