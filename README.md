@@ -58,7 +58,7 @@ But first we need to create the database.  We'll use the command line applicatio
 $ createdb sql-crud
 ```
 
-As an alternative, we could use the **[CREATE DATABASE](http://www.postgresql.org/docs/9.4/static/sql-createdatabase.html)** command from within `psql`.  This requires that we wrap the database name in double quotes (i.e. `create database "sql-crud";`)
+As an alternative, we could use the **[CREATE DATABASE](http://www.postgresql.org/docs/9.4/static/sql-createdatabase.html)** command from within `psql`.  This requires that we wrap the database name in double quotes (i.e. `create database "sql-crud";`) because `-` is not allowed as a name character by default.
 
 Once we've created the database we can access it using the psql command:
 
@@ -71,7 +71,7 @@ Type "help" for help.
 
 sql-crud=#
 ```
-psql has help for both its built in commands and for **[SQL](http://www.postgresql.org/docs/9.4/static/sql.html)** _(Structure Query Language - see also the [Wikipedia article](http://en.wikipedia.org/wiki/SQL))_ .
+psql has help for both its built-in commands and for **[SQL](http://www.postgresql.org/docs/9.4/static/sql.html)** _(Structure Query Language - see also the [Wikipedia article](http://en.wikipedia.org/wiki/SQL))_ .
 
 ```sql
 psql (9.4.1)
@@ -159,7 +159,7 @@ $ subl .
 
 Together, we'll repeat the above for pets instead of people.
 
-First, let's come up with the columns we'll need.
+First, let's come up with some of the columns we'll need.
 
 ### On Macs
 
