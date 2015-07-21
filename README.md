@@ -26,7 +26,7 @@ By the end of this lesson, students should be able to:
 
 At it's simplest, a relational database is a mechanism to store and retrieve data in a tabular form.
 
-Spreadsheets are a good analogy.  Individual sheets as tables and the whole spreadsheet as a database.  Please follow **[this link](https://docs.google.com/spreadsheets/d/11oSk85me0klRDfa6o7OfkzMVnvOuhxsF9W-bQEPP5wk/edit?usp=sharing)** for an example.
+Spreadsheets are a good analogy.  Individual sheets as tables and the whole spreadsheet as a database.  See **[this link](https://docs.google.com/spreadsheets/d/11oSk85me0klRDfa6o7OfkzMVnvOuhxsF9W-bQEPP5wk/edit?usp=sharing)** for an example.
 
 Why is this important?
 
