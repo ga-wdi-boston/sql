@@ -76,6 +76,8 @@ $
 
 But first we need to create the database.  We'll use the **[CREATE DATABASE](http://www.postgresql.org/docs/9.4/static/sql-createdatabase.html)** command from within `psql`.  This is a  **[SQL](http://www.postgresql.org/docs/9.4/static/sql.html)** _(Structure Query Language - see also the [Wikipedia article](http://en.wikipedia.org/wiki/SQL))_ command and requires that we wrap the database name in double quotes (i.e. `create database "sql-crud";`). A `-` is not allowed as a name character in SQL unless the name is surrounded with double-quotes.
 
+If we want to remove a database - be careful, this is unrecoverable - we use the [DROP DATABASE](http://www.postgresql.org/docs/9.4/static/sql-dropdatabase.html) command.
+
 If we run `psql` without a parameter it will connect to our default database, usually named with our login.
 
 ```bash
@@ -140,10 +142,12 @@ We create a table to define the names and types of the data we want to store abo
 
 PostgreSQL's documentation is extensive and excellent, and we'll want to make use of it throughout the lesson.
 
-- [Table basics](http://www.postgresql.org/docs/9.4/static/ddl-basics.html) - a brief overview of tables in an RDBMS
-- [Data Types](http://www.postgresql.org/docs/9.4/static/datatype.html) - the data types available in PostgreSQL
-- [CREATE TABLE](http://www.postgresql.org/docs/9.4/static/sql-createtable.html) - detailed documentation of PostgreSQL's version of the SQL `CREATE TABLE` command
+- [Table basics](http://www.postgresql.org/docs/9.4/static/ddl-basics.html) - a brief overview of tables in an RDBMS.
+- [Data Types](http://www.postgresql.org/docs/9.4/static/datatype.html) - the data types available in PostgreSQL.
+- [CREATE TABLE](http://www.postgresql.org/docs/9.4/static/sql-createtable.html) - detailed documentation of PostgreSQL's version of the SQL `CREATE TABLE` command.
+- [DROP TABLE](http://www.postgresql.org/docs/9.4/static/sql-droptable.html)  - detailed documentation of PostgreSQL's version of the SQL `DROP TABLE` command.
 
+Note well, `DROP TABLE` is unrecoverable if it executes successfully.
 
 #### Demonstration
 
@@ -171,9 +175,9 @@ Once you've created the table `pets`, create the table `people` from the demonst
 
 ### Adding rows to a table
 
-- [Inserting Data](http://www.postgresql.org/docs/9.4/static/dml-insert.html) - overview of adding rows
-- [INSERT](http://www.postgresql.org/docs/9.4/static/sql-insert.html) - detailed documentation of PostgreSQL's version of the SQL `INSERT INTO` command
-- [COPY](http://www.postgresql.org/docs/9.4/static/sql-copy.html) - detailed documentation of PostgreSQL's `COPY` command for loading data in bulk
+- [Inserting Data](http://www.postgresql.org/docs/9.4/static/dml-insert.html) - overview of adding rows to a table.
+- [INSERT](http://www.postgresql.org/docs/9.4/static/sql-insert.html) - detailed documentation of PostgreSQL's version of the SQL `INSERT INTO` command.
+- [COPY](http://www.postgresql.org/docs/9.4/static/sql-copy.html) - detailed documentation of PostgreSQL's `COPY` command for loading data in bulk.
 
 For inserting bulk data, PostgreSQL provides the `COPY` command.  We won't use that command directly, as it executes relative to the server installation, rather we'll use `psql`'s meta-command `\copy` allowing us to load data relative to where we run `psql`. Bulk loading is something available with most RDBMSs, but the specific commands and capabilities vary.
 
@@ -197,8 +201,8 @@ Pets then People
 
 This is about the *query* part of Structured _Query_ Language.
 
-- [Queries](http://www.postgresql.org/docs/9.4/static/queries.html)
-- [SELECT](http://www.postgresql.org/docs/9.4/static/sql-select.html)
+- [Queries](http://www.postgresql.org/docs/9.4/static/queries.html) - TOC of the Queries section of PostgreSQL's documentation for `The SQL Language`
+- [SELECT](http://www.postgresql.org/docs/9.4/static/sql-select.html) - detailed documentation of PostgreSQL's version of the SQL `SELECT` command.
 
 #### Demonstration
 
@@ -216,8 +220,8 @@ Pets then People
 
 ### Changing the structure of a table
 
-- [Modifying Tables](http://www.postgresql.org/docs/9.4/static/ddl-alter.html)
-- [ALTER TABLE](http://www.postgresql.org/docs/9.4/static/sql-altertable.html)
+- [Modifying Tables](http://www.postgresql.org/docs/9.4/static/ddl-alter.html) - overview of changing tables.
+- [ALTER TABLE](http://www.postgresql.org/docs/9.4/static/sql-altertable.html) - detailed documentation of PostgreSQL's version of the SQL `ALTER TABLE` command.
 
 #### Demonstration
 
@@ -233,10 +237,10 @@ Pets then People
 
 ---
 
-### Changing rows in a table
+### Changing the data in rows in a table
 
-- [Updating Data](http://www.postgresql.org/docs/9.4/static/dml-update.html)
-- [UPDATE](http://www.postgresql.org/docs/9.4/static/sql-update.html)
+- [Updating Data](http://www.postgresql.org/docs/9.4/static/dml-update.html) - overview of changing rows
+- [UPDATE](http://www.postgresql.org/docs/9.4/static/sql-update.html) - detailed documentation of PostgreSQL's version of the SQL `UPDATE` command.
 
 #### Demonstration
 
@@ -254,12 +258,15 @@ Pets then People
 
 ### Removing rows from a table
 
-- [Deleting Data](http://www.postgresql.org/docs/9.4/static/dml-delete.html)
-- [DELETE](http://www.postgresql.org/docs/9.4/static/sql-delete.html)
+- [Deleting Data](http://www.postgresql.org/docs/9.4/static/dml-delete.html) - overview of removing rows from a table
+- [DELETE](http://www.postgresql.org/docs/9.4/static/sql-delete.html) - detailed documentation of PostgreSQL's version of the SQL `DELETE` command.
+- [TRUNCATE](http://www.postgresql.org/docs/9.4/static/sql-truncate.html) - detailed documentation of PostgreSQL's `TRUNCATE` command.
 
 #### Demonstration
 
 People
+
+Note, `TRUNCATE <table name>` is functionally equivalent to `DELETE FROM <table name>`, it will remove all the rows from the table.
 
 #### Code along
 
@@ -269,3 +276,4 @@ Cities
 
 Pets then People
 
+## Assessment
