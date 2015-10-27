@@ -1,0 +1,2 @@
+-- bulk load person data
+\copy people(surname, given_name, gender, dob) FROM './data/people.csv' WITH (FORMAT csv, HEADER true)
