@@ -6,7 +6,7 @@
 
 Fork and clone this repository.
 
-Please remember that demonstrations are to take notes, code alongs are to write code with instructor, and practices are to write code with the support of the instructional team.
+Please remember that demonstrations are to take notes, code alongs are to write code with the instructor, and practices are to write code with the support of the instructional team.
 
 ## Objectives
 
@@ -183,38 +183,44 @@ For inserting bulk data, PostgreSQL provides the `COPY` command.  We won't use t
 
 #### Demonstration
 
-People
+First we'll use variations of `INSERT` to add a few rows to people.  We'll store the the commands in `insert_into/people.sql`.
 
-Note that string literals in SQL statements are delimited by single quotes, i.e. `'`.  To include a single quote in a string literal, double them, e.g. `'That''s interesting'`.  This is not an issue when loading from a valid CSV file using `COPY` or `\copy`.
+Note that string literals in SQL statements are delimited by single quotes, i.e. `'`.  To include a single quote in a string literal, double it, e.g. `'That''s interesting'`.  This is not an issue when loading from a valid CSV file using PostgreSQL's `COPY` command or psql's `\copy` command.
+
+Next we'll load data in bulk from `data/people.csv` using `\copy`.  We'll store that command in `bulk_load/people.psql`
 
 #### Code along
 
-Cities
+Together we'll add a few rows to cities then we'll bulk load `data/cities.csv`.
 
 #### Practice
 
-Pets then People
+Add a pet to the `pets` table using `INSERT` then bulk load `data/pets.csv`.
+
+Next add a person to the `people` table using `INSERT` then bulk load `data/people.csv`.
 
 ---
 
 ### Retrieving rows from a table
 
-This is about the *query* part of Structured _Query_ Language.
+This is about the *query* part of Structured _Query_ Language.  Query statements can run from almost trivial to highly complex.  They provide a mechanism to retrieve and summarize the data in your database.
 
 - [Queries](http://www.postgresql.org/docs/9.4/static/queries.html) - TOC of the Queries section of PostgreSQL's documentation for `The SQL Language`
 - [SELECT](http://www.postgresql.org/docs/9.4/static/sql-select.html) - detailed documentation of PostgreSQL's version of the SQL `SELECT` command.
 
 #### Demonstration
 
-People
+Let's see some what we can learn about the people in the database.
 
 #### Code along
 
-Cities
+Together we'll build a query to get the count of cities by country.
 
 #### Practice
 
-Pets then People
+Write a query to get the count of animals by kind born before 2010.
+
+Then write a query to count people by height.
 
 ---
 
@@ -225,15 +231,15 @@ Pets then People
 
 #### Demonstration
 
-People
+We'll remove the column `height` from people.
 
 #### Code along
 
-Cities
+We'll change the type of the columns longitude and latitude.
 
 #### Practice
 
-Pets then People
+Add the column `weight` to pets then remove the column `height` from people.
 
 ---
 
@@ -244,15 +250,15 @@ Pets then People
 
 #### Demonstration
 
-People
+We'll update some people's weight.
 
 #### Code along
 
-Cities
+Let's update some cities population.
 
 #### Practice
 
-Pets then People
+Update weight for pets then people.
 
 ---
 
@@ -264,16 +270,16 @@ Pets then People
 
 #### Demonstration
 
-People
+We'll remove a few people from the database.
 
 Note, `TRUNCATE <table name>` is functionally equivalent to `DELETE FROM <table name>`, it will remove all the rows from the table.
 
 #### Code along
 
-Cities
+Let's remove the cities that don't have a region.
 
 #### Practice
 
-Pets then People
+Remove pets born before 1996 then people taller than 6 feet.
 
 ## Assessment
