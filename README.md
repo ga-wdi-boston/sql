@@ -235,7 +235,7 @@ We'll remove the column `height` from people.
 
 #### Code along
 
-We'll change the type of the columns longitude and latitude.
+We'll change the type of the columns longitude and latitude in cities.
 
 #### Practice
 
