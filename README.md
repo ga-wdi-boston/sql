@@ -186,6 +186,7 @@ So, if each row is the data for a person,
  then the table is called people.
 By another convention,
  each table will have an `id` column that uniquely identifies each row.
+This unique `id` is the `PRIMARY KEY` of the table.
 We'll use the first line of `data/people.csv` for the rest of the column names.
 
 What data-types should we use for each column?
