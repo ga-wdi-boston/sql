@@ -209,7 +209,7 @@ We'll save the statement in `create_table/cities.sql`
 Create a table to hold information about pets.
 Use the first row of `data/pets.csv` for the names of the columns
  other than `id`.
-Use `create_table/cities.sql` to store the SQL statement.
+Use `create_table/pets.sql` to store the SQL statement.
 
 Once you've created the table `pets`,
  create the table `people` from the demonstration.
