@@ -156,6 +156,21 @@ Let's look at some of the help for `psql` commands.
  objects in the current database.
 -   `\i` reads commands from a file
 
+Now let's make sure we're in the right database:
+
+```sql
+sql-crud=> select current_catalog;
+ current_database       
+------------------
+ sql-crud
+(1 row)
+
+sql-crud=>
+```
+
+We'll run all our SQL commands against the same database,
+ so it's important that we consistently use `sql-crud`.
+
 ### Creating tables
 
 We create a table to define the names and types of
