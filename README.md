@@ -24,7 +24,7 @@ By the end of this lesson, students should be able to:
 ## Prerequisites
 
 -   A working **[PostgreSQL](http://www.postgresql.org/)** installation.
--   [SQl Study](https://github.com/ga-wdi-boston/sql-study)
+-   [SQL Study](https://github.com/ga-wdi-boston/sql-study)
 
 ## Introduction
 
