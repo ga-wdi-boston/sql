@@ -8,7 +8,7 @@ Fork, clone, and branch (training).
 
 Please remember that demonstrations are to take notes,
 code alongs are to write code with the instructor,
-and practices are to write code with the support of the instructional team.
+and labs are to write code with the support of the instructional team.
 
 ## Objectives
 
