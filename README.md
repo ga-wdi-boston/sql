@@ -90,10 +90,10 @@ services start postgresql` folder.
 ## Code-Along: CREATE DATABASE
 
 We'll use `sql-crud` as the database to hold our tables and
-**[psql](http://www.postgresql.org/docs/9.4/static/app-psql.html)** to interact
-with it.  `psql` is PostgreSQL's command line client which lets us execute SQL
-commands interactively (REPL-like) and from scripts.  It also has some built in
-commands we'll find useful.
+**[psql](http://www.postgresql.org/docs/current/static/app-psql.html)** to
+interact with it.  `psql` is PostgreSQL's command line client which lets us
+execute SQL commands interactively (REPL-like) and from scripts.  It also has
+some built in commands we'll find useful.
 
 ```bash
 $ psql sql-crud
@@ -102,16 +102,16 @@ $
 ```
 
 But first we need to create the database.  We'll use the **[CREATE
-DATABASE](http://www.postgresql.org/docs/9.4/static/sql-createdatabase.html)**
+DATABASE](http://www.postgresql.org/docs/current/static/sql-createdatabase.html)**
 command from within `psql`.  This is a
-**[SQL](http://www.postgresql.org/docs/9.4/static/sql.html)** _(Structure Query
-Language - see also the [Wikipedia article](http://en.wikipedia.org/wiki/SQL))_
+**[SQL](http://www.postgresql.org/docs/current/static/sql.html)** _(Structure
+Query Language - see also the [Wikipedia article](http://en.wikipedia.org/wiki/SQL))_
 command and requires that we wrap the database name in double quotes (i.e.
 `create database "sql-crud";`). A `-` is not allowed as a name character in SQL
 unless the name is surrounded with double-quotes.
 
 If we want to remove a database - be careful, this is unrecoverable - we use the
-[DROP DATABASE](http://www.postgresql.org/docs/9.4/static/sql-dropdatabase.html)
+[DROP DATABASE](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
 command.
 
 If we run `psql` without a parameter it will connect to our default database,
@@ -122,7 +122,7 @@ psql
 ```
 
 ```sql
-psql (9.4.5)
+ (9.5.2)
 Type "help" for help.
 
 and=> CREATE DATABASE "sql-crud";
@@ -147,7 +147,7 @@ psql sql-crud
 ```
 
 ```sql
-psql (9.4.5)
+psql (9.5.2)
 Type "help" for help.
 
 sql-crud=>
@@ -156,7 +156,7 @@ sql-crud=>
 `psql` has help for both its built-in commands and for SQL.
 
 ```sql
-psql (9.4.5)
+psql (9.5.2)
 Type "help" for help.
 
 sql-crud=> help
@@ -198,14 +198,14 @@ We create a table to define the names and types of data we want to store.
 PostgreSQL's documentation is extensive and excellent, and we'll want to make
 use of it throughout the lesson.
 
--   [Table basics](http://www.postgresql.org/docs/9.4/static/ddl-basics.html) -
+-   [Table basics](http://www.postgresql.org/docs/current/static/ddl-basics.html) -
  a brief overview of tables in an RDBMS.
--   [Data Types](http://www.postgresql.org/docs/9.4/static/datatype.html) -
+-   [Data Types](http://www.postgresql.org/docs/current/static/datatype.html) -
  the data types available in PostgreSQL.
--   [CREATE TABLE](http://www.postgresql.org/docs/9.4/static/sql-createtable.html) -
+-   [CREATE TABLE](http://www.postgresql.org/docs/current/static/sql-createtable.html) -
  detailed documentation of PostgreSQL's version of
  the SQL `CREATE TABLE` command.
--   [DROP TABLE](http://www.postgresql.org/docs/9.4/static/sql-droptable.html) -
+-   [DROP TABLE](http://www.postgresql.org/docs/current/static/sql-droptable.html) -
  detailed documentation of PostgreSQL's version of the SQL `DROP TABLE` command.
 
 Note well, `DROP TABLE` is unrecoverable if it executes successfully.
@@ -246,12 +246,12 @@ demonstration.
 
 ## Adding Rows to a Table
 
--   [Inserting Data](http://www.postgresql.org/docs/9.4/static/dml-insert.html) -
+-   [Inserting Data](http://www.postgresql.org/docs/current/static/dml-insert.html) -
  overview of adding rows to a table.
--   [INSERT](http://www.postgresql.org/docs/9.4/static/sql-insert.html) -
+-   [INSERT](http://www.postgresql.org/docs/current/static/sql-insert.html) -
  detailed documentation of PostgreSQL's
  version of the SQL `INSERT INTO` command.
--   [COPY](http://www.postgresql.org/docs/9.4/static/sql-copy.html) -
+-   [COPY](http://www.postgresql.org/docs/current/static/sql-copy.html) -
  detailed documentation of PostgreSQL's `COPY` command for loading data in bulk.
 
 For inserting bulk data, PostgreSQL provides the `COPY` command. We won't use
@@ -290,10 +290,10 @@ This is about the _query_ part of Structured _Query_ Language. Query statements
 can run from almost trivial to highly complex. They provide a mechanism to
 retrieve and summarize the data in your database.
 
--   [Queries](http://www.postgresql.org/docs/9.4/static/queries.html) - TOC of
- the Queries section of PostgreSQL's documentation for `The SQL Language`.
--   [SELECT](http://www.postgresql.org/docs/9.4/static/sql-select.html) -
- detailed documentation of PostgreSQL's version of the SQL `SELECT` command.
+-   [Queries](http://www.postgresql.org/docs/current/static/queries.html) - TOC
+    of the Queries section of PostgreSQL's documentation for `The SQL Language`.
+-   [SELECT](http://www.postgresql.org/docs/current/static/sql-select.html) -
+    detailed documentation of PostgreSQL's version of the SQL `SELECT` command.
 
 ### Follow-Along: SELECT
 
@@ -311,9 +311,9 @@ Then write a query to count people by height.
 
 ## Changing the Structure of a Table
 
--   [Modifying Tables](http://www.postgresql.org/docs/9.4/static/ddl-alter.html) -
+-   [Modifying Tables](http://www.postgresql.org/docs/current/static/ddl-alter.html) -
  overview of changing tables.
--   [ALTER TABLE](http://www.postgresql.org/docs/9.4/static/sql-altertable.html) -
+-   [ALTER TABLE](http://www.postgresql.org/docs/current/static/sql-altertable.html) -
  detailed documentation of PostgreSQL's version of
  the SQL `ALTER TABLE` command.
 
@@ -331,9 +331,9 @@ Add the column `weight` to pets then remove the column `weight` from people.
 
 ## Changing the Data in Rows of a Table
 
--   [Updating Data](http://www.postgresql.org/docs/9.4/static/dml-update.html) -
+-   [Updating Data](http://www.postgresql.org/docs/current/static/dml-update.html) -
  overview of changing rows
--   [UPDATE](http://www.postgresql.org/docs/9.4/static/sql-update.html) -
+-   [UPDATE](http://www.postgresql.org/docs/current/static/sql-update.html) -
  detailed documentation of PostgreSQL's version of the SQL `UPDATE` command.
 
 ### Follow-Along: UPDATE
@@ -350,11 +350,11 @@ Update weight for pets then height for people.
 
 ## Removing Rows from a Table
 
--   [Deleting Data](http://www.postgresql.org/docs/9.4/static/dml-delete.html) -
+-   [Deleting Data](http://www.postgresql.org/docs/current/static/dml-delete.html) -
  overview of removing rows from a table
--   [DELETE](http://www.postgresql.org/docs/9.4/static/sql-delete.html) -
+-   [DELETE](http://www.postgresql.org/docs/current/static/sql-delete.html) -
  detailed documentation of PostgreSQL's version of the SQL `DELETE` command.
--   [TRUNCATE](http://www.postgresql.org/docs/9.4/static/sql-truncate.html) -
+-   [TRUNCATE](http://www.postgresql.org/docs/current/static/sql-truncate.html) -
  detailed documentation of PostgreSQL's `TRUNCATE` command.
 
 ### Follow-Along: DELETE
