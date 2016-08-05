@@ -2,14 +2,6 @@
 
 # An introduction to relational databases
 
-## Instructions
-
-Fork, clone, and branch (training).
-
-Please remember that demonstrations are to take notes, code alongs are to write
-code with the instructor, and labs are to write code with the support of the
-instructional team.
-
 ## Prerequisites
 
 -   A working **[PostgreSQL](http://www.postgresql.org/)** installation.
@@ -31,6 +23,13 @@ By the end of this, developers should be able to:
 1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
     this repository.
 1.  Create a new branch, `training`, for your work.
+1.  Install dependencies.
+
+## Instructions
+
+Please remember that demonstrations are to take notes, code alongs are to write
+code with the instructor, and labs are to write code with the support of the
+instructional team.
 
 ## Introduction
 
