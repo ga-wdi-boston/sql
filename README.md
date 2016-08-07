@@ -121,7 +121,7 @@ psql
 ```
 
 ```sql
- (9.5.2)
+ (9.5.3)
 Type "help" for help.
 
 and=> CREATE DATABASE "sql-crud";
@@ -146,7 +146,7 @@ psql sql-crud
 ```
 
 ```sql
-psql (9.5.2)
+psql (9.5.3)
 Type "help" for help.
 
 sql-crud=>
@@ -155,7 +155,7 @@ sql-crud=>
 `psql` has help for both its built-in commands and for SQL.
 
 ```sql
-psql (9.5.2)
+psql (9.5.3)
 Type "help" for help.
 
 sql-crud=> help
@@ -187,8 +187,8 @@ sql-crud=> select current_catalog;
 sql-crud=>
 ```
 
-We'll run all our SQL commands against the same database,
- so it's important that we consistently use `sql-crud`.
+We'll run all our SQL commands against the same database, so it's important that
+we consistently use `sql-crud`.
 
 ## Tables
 
@@ -209,14 +209,14 @@ use of it throughout the lesson.
 
 Note well, `DROP TABLE` is unrecoverable if it executes successfully.
 
-## Follow-Along: CREATE TABLE
+## Demonstration: CREATE TABLE
 
 We'll create a table to hold people. By convention (the one we'll use
 throughout), tables are named with the pluralization of the name of the object
 whose data they hold. So, if each row is the data for a person, then the table
 is called people. By another convention, each table will have an `id` column
 that uniquely identifies each row. This unique `id` is the `PRIMARY KEY` of the
-table. We'll use the first line of `data/people.csv` for the rest of the column
+table. We'll use the first line of `data/books.csv` for the rest of the column
 names.
 
 What data-types should we use for each column?
@@ -259,7 +259,7 @@ rather we'll use `psql`'s meta-command `\copy` allowing us to load data relative
 to where we run `psql`. Bulk loading is something available with most RDBMSs,
 but the specific commands and capabilities vary.
 
-### Follow-Along: INSERT INTO and COPY
+### Demonstration: INSERT INTO and COPY
 
 First we'll use variations of `INSERT` to add a few rows to people. We'll store
 the the commands in `insert_into/people.sql`.
@@ -294,7 +294,7 @@ retrieve and summarize the data in your database.
 -   [SELECT](http://www.postgresql.org/docs/current/static/sql-select.html) -
     detailed documentation of PostgreSQL's version of the SQL `SELECT` command.
 
-### Follow-Along: SELECT
+### Demonstration: SELECT
 
 Let's see some what we can learn about the people in the database.
 
@@ -316,7 +316,7 @@ Then write a query to count people by height.
  detailed documentation of PostgreSQL's version of
  the SQL `ALTER TABLE` command.
 
-### Follow-Along: ALTER TABLE
+### Demonstration: ALTER TABLE
 
 We'll remove the column `weight` from people.
 
@@ -335,7 +335,7 @@ Add the column `weight` to pets then remove the column `weight` from people.
 -   [UPDATE](http://www.postgresql.org/docs/current/static/sql-update.html) -
  detailed documentation of PostgreSQL's version of the SQL `UPDATE` command.
 
-### Follow-Along: UPDATE
+### Demonstration: UPDATE
 
 We'll update some people's height.
 
@@ -356,7 +356,7 @@ Update weight for pets then height for people.
 -   [TRUNCATE](http://www.postgresql.org/docs/current/static/sql-truncate.html) -
  detailed documentation of PostgreSQL's `TRUNCATE` command.
 
-### Follow-Along: DELETE
+### Demonstration: DELETE
 
 We'll remove a few people from the database.
 
