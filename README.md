@@ -27,9 +27,9 @@ By the end of this, developers should be able to:
 
 ## Instructions
 
-Please remember that demonstrations are to take notes, code alongs are to write
-code with the instructor, and labs are to write code with the support of the
-instructional team.
+Please remember that demonstrations are for taking notes, code alongs are to
+write code with the instructor, and labs are to write code with the support of
+the instructional team.
 
 ## Introduction
 
@@ -62,7 +62,10 @@ later.
 
 ### Relational Database Management System ([RDBMS](http://en.wikipedia.org/wiki/Relational_database_management_system))
 
-A **[Database Server](http://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png)** is a set of processes and files that manage the databases that store the tables.  Sticking with our previous analogy a database server would map to Google Sheets.
+A **[Database
+Server](http://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png)**
+is a set of processes and files that manage the databases that store the tables.
+Sticking with our previous analogy a database server would map to Google Sheets.
 
 ### Verb Equivalence
 
@@ -84,9 +87,9 @@ source database server, which should already be installed on your computer.
 _On Macs_ you can run `brew services list` to see if PostgreSQL is running.
 
 If the server isn't running, `status` not `started`, please start it using `brew
-services start postgresql` folder.
+services start postgresql`.
 
-## Code-Along: CREATE DATABASE
+## Code along: CREATE DATABASE
 
 We'll use `sql-crud` as the database to hold our tables and
 **[psql](http://www.postgresql.org/docs/current/static/app-psql.html)** to
@@ -110,7 +113,8 @@ command and requires that we wrap the database name in double quotes (i.e.
 unless the name is surrounded with double-quotes.
 
 If we want to remove a database - be careful, this is unrecoverable - we use the
-[DROP DATABASE](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
+[DROP
+DATABASE](http://www.postgresql.org/docs/current/static/sql-dropdatabase.html)
 command.
 
 If we run `psql` without a parameter it will connect to our default database,
@@ -211,36 +215,37 @@ Note well, `DROP TABLE` is unrecoverable if it executes successfully.
 
 ## Demonstration: CREATE TABLE
 
-We'll create a table to hold people. By convention (the one we'll use
-throughout), tables are named with the pluralization of the name of the object
-whose data they hold. So, if each row is the data for a person, then the table
-is called people. By another convention, each table will have an `id` column
-that uniquely identifies each row. This unique `id` is the `PRIMARY KEY` of the
-table. We'll use the first line of `data/books.csv` for the rest of the column
-names.
+By convention (the one we'll use throughout), tables are named with the
+pluralization of the name of the object whose data they hold. So for example, if
+each row of data is about a person, then the table is called people. By another
+convention, each table will have an `id` column that uniquely identifies each
+row. This unique `id` is the `PRIMARY KEY` of the table.
+
+We'll create a table to hold books. We'll use the first line of `data/books.csv`
+for the column names.
 
 What data-types should we use for each column?
 
-We'll save the SQL statement to create the people table in
-`create_table/people.sql`. We can execute the commands in the file using `psql
--f <file>` or from the psql prompt using `\i <file>`.
+We'll save the SQL statement to create the books table in
+`scripts/library/create_table_books.sql`. We can execute the commands in the
+file using `psql -f <file>` or from the psql prompt using `\i <file>`.
 
-### Code-Along: CREATE TABLE
+### Code along: CREATE TABLE
 
-Together, we'll create a table to hold information about cities. We'll use the
-first row of `data/cities.csv` for the column names.
+Together, we'll create a table to hold information about patients. We'll use the
+first row of `data/people.csv` for the column names.
 
 What data-types should we use for each column?
 
-We'll save the statement in `create_table/cities.sql`
+We'll save the statement in `scripts/clinic/000_create_table_patients.sql`
 
 ### Lab: CREATE TABLE
 
-Create a table to hold information about pets. Use the first row of
-`data/pets.csv` for the names of the columns other than `id`. Use
-`create_table/pets.sql` to store the SQL statement.
+Create a table to hold information about ingredients. Use the first row of
+`data/ingredients.csv` for the names of the columns other than `id`. Use
+`scripts/cookbook/000_create_table_ingredients.sql` to store the SQL statement.
 
-Once you've created the table `pets`, create the table `people` from the
+Once you've created the table `ingredients`, create the table `books` from the
 demonstration.
 
 ## Adding Rows to a Table
@@ -261,27 +266,29 @@ but the specific commands and capabilities vary.
 
 ### Demonstration: INSERT INTO and COPY
 
-First we'll use variations of `INSERT` to add a few rows to people. We'll store
-the the commands in `insert_into/people.sql`.
+First we'll use variations of `INSERT` to add a few rows to books. We'll store
+the the commands in `scripts/library/010_insert_into_books.sql`.
 
 Note that string literals in SQL statements are delimited by single quotes, i.e.
 `'`. To include a single quote in a string literal, double it, e.g. `'That''s
 interesting'`. This is not an issue when loading from a valid CSV file using
 PostgreSQL's `COPY` command or psql's `\copy` command.
 
-Next we'll load data in bulk from `data/people.csv` using `\copy`. We'll store
-that command in `bulk_load/people.psql`
+Next we'll load data in bulk from `data/books.csv` using `\copy`. We'll store
+that command in `scripts/library/020_bulk_load_books.psql`
 
-### Code-Along: INSERT INTO and COPY
+### Code along: INSERT INTO and COPY
 
-Together we'll add a few rows to cities then we'll bulk load `data/cities.csv`.
+Together we'll add a few rows to patients then we'll bulk load
+`data/people.csv`.
 
 ### Lab: INSERT INTO and COPY
 
-Add a pet to the `pets` table using `INSERT` then bulk load `data/pets.csv`.
+Add an ingredient to the `ingredients` table using `INSERT` then bulk load
+`data/ingredients.csv`.
 
-Next add a person to the `people` table using `INSERT`, then bulk load
-`data/people.csv`.
+Next add a book to the `books` table using `INSERT`, then bulk load
+`data/books.csv`.
 
 ## Retrieving rows from a table
 
@@ -296,17 +303,17 @@ retrieve and summarize the data in your database.
 
 ### Demonstration: SELECT
 
-Let's see some what we can learn about the people in the database.
+Let's see some what we can learn about the books in the database.
 
-### Code-Along: SELECT
+### Code along: SELECT
 
-Together we'll build a query to get the count of cities by country.
+Together we'll build a query to get the count of patients by gender.
 
 ### Lab: SELECT
 
-Write a query to get the count of animals by kind born before 2010.
+Write a query to get the count of ingredients by unit.
 
-Then write a query to count people by height.
+Then write a query to count books by author.
 
 ## Changing the Structure of a Table
 
@@ -318,15 +325,16 @@ Then write a query to count people by height.
 
 ### Demonstration: ALTER TABLE
 
-We'll remove the column `weight` from people.
+We'll add the column `isbn` to books.
 
-### Code-Along: ALTER TABLE
+### Code along: ALTER TABLE
 
-We'll change the type of the columns longitude and latitude in cities.
+We'll change the type of the columns `height` and `weight` in patients.
 
 ### Lab: ALTER TABLE
 
-Add the column `weight` to pets then remove the column `weight` from people.
+Add columns for macro-nutrients to ingredients then add the column `isbn` to
+books.
 
 ## Changing the Data in Rows of a Table
 
@@ -337,15 +345,15 @@ Add the column `weight` to pets then remove the column `weight` from people.
 
 ### Demonstration: UPDATE
 
-We'll update some people's height.
+We'll update the isbn for some books.
 
-### Code-Along: UPDATE
+### Code along: UPDATE
 
-Let's update some cities population.
+Let's update some patients' weights.
 
 ### Lab: UPDATE
 
-Update weight for pets then height for people.
+Update macro-nutrients for some ingredients then isbn for some books.
 
 ## Removing Rows from a Table
 
@@ -358,19 +366,19 @@ Update weight for pets then height for people.
 
 ### Demonstration: DELETE
 
-We'll remove a few people from the database.
+We'll remove a few books from the database.
 
 Note, `TRUNCATE <table name>;` is functionally equivalent
  to `DELETE FROM <table name>;`,
  it will remove all the rows from the table.
 
-#### Code-Along: DELETE
+#### Code along: DELETE
 
-Let's remove the cities that don't have a region.
+Let's remove the patients who's given and surnames start with the same letter.
 
 #### Lab: DELETE
 
-Remove pets born before 1996 then people taller than 5 feet 10 inches.
+Remove ingredients you wouldn't keep in your kitchen or pantry.
 
 ## [License](LICENSE)
 
