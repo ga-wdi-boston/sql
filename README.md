@@ -9,7 +9,7 @@
 
 ## Objectives
 
-By the end of this, developers should be able to:
+By the end of this talk, developers should be able to:
 
 -   Create a database table
 -   Insert a row or rows into a database table
@@ -28,8 +28,8 @@ By the end of this, developers should be able to:
 ## Instructions
 
 Please remember that demonstrations are for taking notes, code alongs are to
-write code with the instructor, and labs are to write code with the support of
-the instructional team.
+write code with the lead consultant, and labs are to write code with the support
+of the consulting team.
 
 ## Introduction
 
