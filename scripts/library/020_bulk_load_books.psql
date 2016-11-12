@@ -1,0 +1,1 @@
+\copy books(title,author,published_on) FROM 'data/books.csv' WITH (FORMAT csv, HEADER true)

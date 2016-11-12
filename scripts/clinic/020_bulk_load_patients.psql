@@ -1,0 +1,1 @@
+\copy patients(surname,given_name,gender,height,weight,born_on) FROM 'data/people.csv' WITH (FORMAT csv, HEADER true)
