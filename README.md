@@ -20,9 +20,10 @@ By the end of this talk, developers should be able to:
 
 ## Preparation
 
-1.  [Fork and clone](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
-    this repository.
+1.  Fork and clone this repository.
+    [FAQ](https://github.com/ga-wdi-boston/meta/wiki/ForkAndClone)
 1.  Create a new branch, `training`, for your work.
+1.  Checkout to the `training` branch.
 1.  Install dependencies.
 
 ## Instructions
@@ -380,7 +381,12 @@ Let's remove the patients who's given and surnames start with the same letter.
 
 Remove ingredients you wouldn't keep in your kitchen or pantry.
 
+## Additional Resources
+
+-   [SQL Wikipedia article](https://en.wikipedia.org/wiki/SQL)
+
 ## [License](LICENSE)
 
-Source code distributed under the MIT license. Text and other assets copyright
-General Assembly, Inc., all rights reserved.
+1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
+1.  All software code is licensed under GNU GPLv3. For commercial use or
+    alternative licensing, please contact legal@ga.co.
