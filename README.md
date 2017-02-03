@@ -29,8 +29,8 @@ By the end of this talk, developers should be able to:
 ## Instructions
 
 Please remember that demonstrations are for taking notes, code alongs are to
-write code with the lead consultant, and labs are to write code with the support
-of the consulting team.
+write code following the consultant's lead, and labs are to write code with the
+support of the consulting team.
 
 ## Introduction
 
