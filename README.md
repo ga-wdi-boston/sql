@@ -377,7 +377,8 @@ name>;`, it will remove all the rows from the table.
 
 #### Code along: DELETE
 
-Let's remove the patients who's given and surnames start with the same letter.
+Let's remove the patients who's given and family names start with the same
+letter.
 
 #### Lab: DELETE
 
