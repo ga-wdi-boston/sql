@@ -1,0 +1,2 @@
+ALTER TABLE books
+ADD COLUMN isbn TEXT;
